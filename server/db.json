@@ -1,0 +1,24 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Isma",
+      "email": "typicode@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Brahim",
+      "email": "typicode@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "John",
+      "email": "typicode@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "Batista",
+      "email": "typicode@gmail.com"
+    }
+  ]
+}
