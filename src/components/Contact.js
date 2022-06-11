@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ContactList from "./ContactList";
+import { NIL as NIL_UUID } from "uuid";
+import ContactForm from "./ContactForm";
 
 const Contact = () => {
   const [contacts, setContacts] = useState([]);
@@ -9,16 +11,35 @@ const Contact = () => {
 
   const getContacts = async () => {
     const res = await axios.get(apiUrl);
-    const result = res.data;
-    setContacts(result);
+    const data = res.data;
+    setContacts(data);
   };
 
   useEffect(() => {
     getContacts();
   }, []);
 
-  const deleteHandler = (id) => {
-    setContacts(contacts.filter((contact) => contact.id !== id));
+  const addContact = async (contact) => {
+    console.log(contact);
+    const id = Math.floor(Math.random() * 10000);
+
+    const request = {
+      id,
+      ...contact,
+    };
+
+    const response = await axios.post(apiUrl, request);
+    console.log(response);
+    setContacts([...contacts, response.data]);
+  };
+
+  const deleteHandler = async (id) => {
+    await axios.delete(`${apiUrl}/${id}`);
+    const newContactList = contacts.filter((contact) => {
+      return contact.id !== id;
+    });
+
+    setContacts(newContactList);
   };
 
   return (
@@ -30,6 +51,7 @@ const Contact = () => {
           onDelete={deleteHandler}
         />
       ))}
+      <ContactForm onAddContact={addContact} />
     </>
   );
 };

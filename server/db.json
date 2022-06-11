@@ -3,22 +3,32 @@
     {
       "id": 1,
       "name": "Isma",
-      "email": "typicode@gmail.com"
+      "email": "typicode@gmail.com",
+      "phone": "0527736898"
     },
     {
       "id": 2,
       "name": "Brahim",
-      "email": "typicode@gmail.com"
+      "email": "typicode@gmail.com",
+      "phone": "0527736898"
     },
     {
       "id": 3,
       "name": "John",
-      "email": "typicode@gmail.com"
+      "email": "typicode@gmail.com",
+      "phone": "0527736898"
     },
     {
-      "id": 4,
-      "name": "Batista",
-      "email": "typicode@gmail.com"
+      "id": 8217,
+      "name": "Ismaila Sylla",
+      "email": "ismailasylla@gmail.com",
+      "phone": "0527736898"
+    },
+    {
+      "id": 5832,
+      "name": "Ismaila Sylla",
+      "email": "ismailasylla@gmail.com",
+      "phone": "0527736898"
     }
   ]
 }

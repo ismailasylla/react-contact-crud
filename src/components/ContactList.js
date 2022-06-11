@@ -17,13 +17,14 @@ const ContactList = ({ contact, onDelete }) => {
             <td scope="row">{contact.id}</td>
             <td>{contact.name}</td>
             <td>{contact.email}</td>
+            <td>{contact.phone}</td>
             <td>
               <button
                 type="button"
                 className="btn btn-danger"
                 onClick={() => onDelete(contact.id)}
               >
-                Danger
+                Delete
               </button>
             </td>
           </tr>
