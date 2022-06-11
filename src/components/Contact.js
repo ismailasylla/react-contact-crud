@@ -17,10 +17,18 @@ const Contact = () => {
     getContacts();
   }, []);
 
+  const deleteHandler = (id) => {
+    setContacts(contacts.filter((contact) => contact.id !== id));
+  };
+
   return (
     <>
       {contacts.map((contact) => (
-        <ContactList key={contact.id} contact={contact} />
+        <ContactList
+          key={contact.id}
+          contact={contact}
+          onDelete={deleteHandler}
+        />
       ))}
     </>
   );
